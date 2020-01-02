@@ -1,0 +1,58 @@
+### get all users
+GET http://localhost:2487/api/user HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZTBhMzQxYjY0NDIwNjIzMzYwNDczNjIiLCJpYXQiOjE1Nzc5NTkzNjYsImV4cCI6MTU3Nzk2Mjk2Nn0.EA_Jfv5hbmlhrH0Cn_S3LuEFjAzl22iiCU9fYCRAtZ0
+
+### creates users
+POST http://localhost:2487/api/user HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Tonderai",
+    "lastName":"Ndangana",
+    "title": "Mr",
+    "email": "tndangana@acalone.africa.technologies",
+    "password": "Password@!!",
+    "mobile":"0772275148",
+    "userName": "tndangana",
+    "dob":"",
+    "account_type":"SPONSOR",
+    "isActive":true
+}
+
+### get single user by id
+GET http://localhost:2487/api/user/5e05dc783e9b201ed64a29c9 HTTP/1.1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZTA1ZGM3ODNlOWIyMDFlZDY0YTI5YzkiLCJpYXQiOjE1Nzc0NDU0MTIsImV4cCI6MTU3NzQ0OTAxMn0.0-fIuvn9mx6Hkw3GOKQtmZ9htWpRHgo61NgS_GV6_OM
+
+### delete by id 
+DELETE  http://localhost:2487/api/user/5e05dc783e9b201ed64a29c9 HTTP/1.1/
+
+
+### login 
+POST http://localhost:2487/api/user/login HTTP/1.1
+content-type: application/json
+
+{
+    "userName": "tndangana",
+    "password": "Password@!!"
+}
+
+### update user by Id
+PUT  http://localhost:2487/api/user/5e05dc783e9b201ed64a29c9 HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZTA1ZGM3ODNlOWIyMDFlZDY0YTI5YzkiLCJpYXQiOjE1Nzc0NDU0MTIsImV4cCI6MTU3NzQ0OTAxMn0.0-fIuvn9mx6Hkw3GOKQtmZ9htWpRHgo61NgS_GV6_OM
+
+
+{
+    "firstName":"Tonderaii",
+    "lastName":"Ndangana",
+    "title": "Dr",
+    "email": "mike@acalone.africa.technologies",
+    "mobile":"0772275149",
+    "userName": "tndangana",
+    "dob":"",
+    "account_type":"MEMBER",
+    "isActive":true
+}
+
+
+
